@@ -4,15 +4,12 @@
 function computerPlay() {
     let num = Math.floor(Math.random() * 3);
    if(num == 0){
-        console.log("ROCK");
         return "ROCK";
     }
     else if(num == 1){
-       console.log("PAPER");
        return "PAPER";
     }
     else{
-       console.log("SCISSORS");
        return "SCISSORS";
     }
    }
@@ -61,7 +58,10 @@ function game(){
     let tie = 0;
  
     for(let i = 0; i < 5; i++){
-        let result = playRound(playerSelection, computerSelection);
+        //let computerSelection = computerPlay();
+        //let playerSelection = playerPlay();
+        let result = playRound();
+
         console.log(result);
     
         if(result.includes("win")){
